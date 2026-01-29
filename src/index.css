@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* --- NEOBRUTALISM CORE COLORS --- */
+  --main: oklch(83.29% 0.2331 132.51); /* Warna Utama (Hijau/Kuning stabilo) */
+  --overlay: oklch(0% 0 0 / 0.8);
+
+  /* Border & Ring Wajib HITAM untuk Light Mode */
+  --border: oklch(0% 0 0);
+  --input: oklch(0% 0 0);
+  --ring: oklch(0% 0 0);
+
+  /* Shadow Kasar (Hard Shadow) */
+  --shadow: 4px 4px 0px 0px var(--border);
+
+  /* Backgrounds */
+  --background: oklch(1 0 0); /* Putih */
+  --foreground: oklch(0% 0 0); /* Teks Hitam */
+
+  --secondary-background: oklch(100% 0 0);
+
+  /* --- SHADCN MAPPING KE NEOBRUTAL --- */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0% 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0% 0 0);
+
+  /* Primary Button pakai warna --main kita */
+  --primary: var(--main);
+  --primary-foreground: oklch(0% 0 0);
+
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0% 0 0);
+
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.4 0 0);
+
+  --accent: var(--main);
+  --accent-foreground: oklch(0% 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+
+  --radius: 0.5rem; /* Radius kotak sedikit */
+
+  /* Charts Colors (Neobrutal Palette) */
+  --chart-1: #8ae500;
+  --chart-2: #0099ff;
+  --chart-3: #ff4d50;
+  --chart-4: #facc00;
+  --chart-5: #7a83ff;
+  --chart-active-dot: #000;
+
+  /* Sidebar */
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0% 0 0);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+
+  --main: oklch(76.26% 0.21309 132.4002);
+
+  --border: oklch(1 0 0); /* Border Putih di dark mode */
+  --input: oklch(1 0 0);
+  --ring: oklch(1 0 0);
+
+  --shadow: 4px 4px 0px 0px var(--border);
+
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+
+  --primary: var(--main);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+
+  /* Chart Dark Mode */
+  --chart-1: #7acc00;
+  --chart-2: #008ae5;
+  --chart-3: #ff6669;
+  --chart-4: #e0b700;
+  --chart-5: #7a83ff;
+  --chart-active-dot: #fff;
+
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@theme inline {
+  /* Definisi Font Work Sans */
+  --font-base: "Work Sans", sans-serif;
+  --font-heading: "Work Sans", sans-serif;
+  --font-weight-base: 500;
+  --font-weight-heading: 700;
+
+  /* Custom Neobrutal vars */
+  --color-main: var(--main);
+  --color-secondary-background: var(--secondary-background);
+  --color-overlay: var(--overlay);
+  --shadow-shadow: var(--shadow);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  /* Sidebar vars */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* --- NEOBRUTALISM SCROLLBAR --- */
+
+/* 1. Lebar Scrollbar */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* 2. Track (Jalur Scrollbar) */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: 3px solid #000000;
+}
+
+/* 3. Thumb (Batang Geser) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--main);
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-radius: 0px;
+}
+
+/* 4. Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+  cursor: grab;
+}
+
+::selection {
+  background-color: #000000;
+  color: var(--main);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-family: var(--font-base);
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-tight;
+  }
+}
