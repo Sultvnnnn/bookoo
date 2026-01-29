@@ -50,7 +50,7 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lokal komputer Anda:
 ### 1. Clone Repository
 
 ```bash
-git clone [https://github.com/username-anda/bookoo-app.git](https://github.com/username-anda/bookoo-app.git)
+git clone https://github.com/Sultvnnnn/bookoo.git
 cd bookoo-app
 ```
 
