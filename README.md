@@ -1,7 +1,7 @@
 # 📚 BOOKOO - Next-Gen Library App
 
 > **UAS Front-End Development**
-> Aplikasi manajemen katalog buku modern dengan gaya desain **Neobrutalism**, dibangun menggunakan ekosistem teknologi JavaScript terbaru (2025 Ready).
+> Aplikasi manajemen katalog buku modern dengan gaya desain **Neobrutalism**, dibangun menggunakan ekosistem teknologi JavaScript terbaru.
 
 ![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)
@@ -50,7 +50,7 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lokal komputer Anda:
 ### 1. Clone Repository
 
 ```bash
-git clone [https://github.com/username-anda/bookoo-app.git](https://github.com/username-anda/bookoo-app.git)
+git clone https://github.com/Sultvnnnn/bookoo.git
 cd bookoo-app
 ```
 
