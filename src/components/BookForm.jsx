@@ -40,6 +40,7 @@ const BookForm = ({ currentBook, setEditing }) => {
 
   const [formData, setFormData] = useState(initialState);
   const [isOpen, setIsOpen] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (currentBook) {
@@ -65,7 +66,12 @@ const BookForm = ({ currentBook, setEditing }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.title) return;
+    if (!formData.title || !formData.author || !formData.publishYear) {
+      setError("Waduh! Judul buku, Penulis, dan Tahun harus diisi ya!");
+      return;
+    }
+
+    setError("");
 
     let result;
     if (currentBook) {
@@ -196,6 +202,12 @@ const BookForm = ({ currentBook, setEditing }) => {
               />
             </div>
           </div>
+
+          {error && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4">
+              <p>{error}</p>
+            </div>
+          )}
 
           <DialogFooter className="mt-4 gap-2">
             <Button
