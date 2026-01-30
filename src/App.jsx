@@ -87,7 +87,7 @@ const BookApp = () => {
               ) : (
                 <div className="col-span-full text-center py-12 border-2 border-dashed border-black rounded-lg bg-gray-50">
                   <p className="font-bold text-xl uppercase">
-                    Data tidak ditemukan.
+                    Data Buku tidak ditemukan.
                   </p>
                 </div>
               )}

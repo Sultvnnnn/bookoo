@@ -23,9 +23,9 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-const BookCard = ({ book, onEdit }) => {
+const BookCard = ({ book, onEdit, onDelete }) => {
   const handleDelete = async () => {
-    await deleteBook(book.id);
+    await onDelete(book.id);
   };
 
   return (
